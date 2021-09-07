@@ -2,11 +2,12 @@
 echo
 echo '========== Zabbix auto install script v1.0 =========='
 echo 'Usage e.g.: sh zabin.sh <DB_password> <server name> [/path/to/pg_directory]'
+echo 'in setup stage via web GUI check the Database host and set this to empty, because database working in UNIX socket.'
 
 # Chek password
 if [ -z "$1" ]
 then
-    echo "ERROR: The database password parameter is not found! See usage e.g. "
+    echo "ERROR: The database password is not found! See usage e.g. "
     exit
 fi
 
